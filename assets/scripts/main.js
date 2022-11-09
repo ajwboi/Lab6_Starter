@@ -41,11 +41,11 @@ function addRecipesToDocument(recipes) {
   //            create a <recipe-card> element for each one, and populate
   //            each <recipe-card> with that recipe data using element.data = ...
   //            Append each element to <main>
-  recipes.forEach(element => {
+  for (ele in recipes) {
     let recipe = document.createElement("recipe-card");
-    recipe.data = element;
+    recipe.data = ele;
     mainEle.append(recipe);
-  });
+  }
 }
 
 /**
